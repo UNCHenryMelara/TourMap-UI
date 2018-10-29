@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.unicomer.regional</groupId>
+	<artifactId>Tourmap-UI-Model</artifactId>
+	<version>0.0.1</version>
+  
+	<properties>
+	
+		<!-- Hibernate / JPA -->
+		<hibernate.version>4.3.6.Final</hibernate.version>
+		<java.version>1.7</java.version>
+		<!-- Test -->
+		<junit.version>4.11</junit.version>
+	</properties>
+	
+	<dependencies>
+
+		<!-- Hibernate
+		<dependency>
+		  <groupId>javax.persistence</groupId>
+		  <artifactId>persistence-api</artifactId>
+		  <version>1.0.2</version>
+		</dependency> -->
+		
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-entitymanager</artifactId>
+		  <version>${hibernate.version}</version>
+		  <!--<exclusions>  
+		    <exclusion>
+		      <groupId>org.hibernate.javax.persistence</groupId>
+		      <artifactId>hibernate-jpa-2.1-api</artifactId>
+		    </exclusion>
+		  </exclusions> -->
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-c3p0</artifactId>
+		  <version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- DATABASE -->
+		<dependency>
+		    <groupId>org.apache.derby</groupId>
+		    <artifactId>derby</artifactId>
+		    <version>10.14.2.0</version>
+		</dependency>
+
+		<!-- Test Artifacts -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>

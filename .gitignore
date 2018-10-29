@@ -1,0 +1,14 @@
+target
+temp
+discard
+.classpath
+.settings
+.project
+error
+input
+output
+discard
+test-output
+*.log*
+.externalToolBuilders
+embed-db.trace.db
